@@ -15,3 +15,15 @@ var climbStairs = function(n) {
 
     return ways[n - 1];
 };
+
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var fib = function(n) {
+        let fibNumbers = [0, 1];
+        for (let i = 2; i <= n; i++) {
+            fibNumbers[i] = fibNumbers[i - 1] + fibNumbers[i - 2];
+        }
+        return fibNumbers[n];
+};
