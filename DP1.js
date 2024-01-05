@@ -27,3 +27,15 @@ var fib = function(n) {
         }
         return fibNumbers[n];
 };
+
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var tribonacci = function(n) {
+        let fibNumbers = [0, 1, 1];
+        for (let i = 3; i <= n; i++) {
+            fibNumbers[i] = fibNumbers[i - 1] + fibNumbers[i - 2] + fibNumbers[i - 3];
+        }
+        return fibNumbers[n];
+};
