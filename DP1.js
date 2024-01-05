@@ -39,3 +39,26 @@ var tribonacci = function(n) {
         }
         return fibNumbers[n];
 };
+
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var tribonacciMem = function(n) {
+        let a = 0;
+        let b = 1;
+        let c = 1;
+    
+        if (n <=2 && n >=1){
+            return b
+        } else if (n == 0){
+            return a
+        }
+        for (let i = 3; i <= n; i++) {
+            temp = c;
+            c = a + b + c;
+            a = b;
+            b = temp;
+        }
+        return c;
+};
